@@ -11,21 +11,23 @@ import "./assets/App.css";
 class App extends Component {
   constructor() {
     super();
-    this.categorias = new Categorias
-    this.notas = new ArrayDeNotas
+    this.categorias = new Categorias();
+    this.notas = new ArrayDeNotas();
   }
 
   render() {
     return (
       <section className="conteudo">
-        <FormularioCadastro 
-        criarNota={this.notas.adicionarNota.bind(this.notas)} 
-        categorias={this.categorias}
+        <FormularioCadastro
+          criarNota={this.notas.adicionarNota.bind(this.notas)}
+          categorias={this.categorias}
         />
         <main className="conteudo-principal">
-          <ListaDeCategorias 
-          adicionarCategoria={this.categorias.adicionarCategoria.bind(this.categorias)}
-          categorias={this.categorias}
+          <ListaDeCategorias
+            adicionarCategoria={this.categorias.adicionarCategoria.bind(
+              this.categorias
+            )}
+            categorias={this.categorias}
           />
           <ListaDeNotas
             notas={this.notas}

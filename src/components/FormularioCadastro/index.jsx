@@ -5,10 +5,10 @@ import "./styles.css";
 class FormularioCadastro extends Component {
   constructor(props) {
     super(props);
-    this.titulo    = "";
-    this.texto     = "";
+    this.titulo = "";
+    this.texto = "";
     this.categoria = "Sem Categoria";
-    this.state     = {categorias: []};
+    this.state = { categorias: [] };
     this._novasCategorias = this._novasCategorias.bind(this);
   }
 
@@ -21,7 +21,7 @@ class FormularioCadastro extends Component {
   }
 
   _novasCategorias(categorias) {
-    this.setState({...this.state, categorias})
+    this.setState({ ...this.state, categorias });
   }
 
   _handleMundancaTitulo(evento) {
@@ -52,7 +52,7 @@ class FormularioCadastro extends Component {
         >
           <option>Sem categoria</option>
           {this.state.categorias.map((categoria, index) => {
-            return <option key={index} >{categoria}</option>;
+            return <option key={index}>{categoria}</option>;
           })}
         </select>
         <input

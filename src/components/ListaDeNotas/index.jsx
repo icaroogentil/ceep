@@ -5,10 +5,9 @@ import CardNota from "../../components/CardNota";
 import "./styles.css";
 
 class ListaDeNotas extends Component {
-
   constructor() {
     super();
-    this.state = {notas: []};
+    this.state = { notas: [] };
     this._novasNotas = this._novasNotas.bind(this);
   }
 
@@ -20,9 +19,9 @@ class ListaDeNotas extends Component {
     this.props.notas.desinscrever(this._novasNotas);
   }
 
-_novasNotas(notas) {
-  this.setState({...this.state, notas});
-}
+  _novasNotas(notas) {
+    this.setState({ ...this.state, notas });
+  }
 
   render() {
     return (
@@ -31,11 +30,11 @@ _novasNotas(notas) {
           return (
             <li className="lista-notas_item" key={index}>
               <CardNota
-              indice={index} 
-              titulo={nota.titulo} 
-              texto={nota.texto}
-              categoria={nota.categoria} 
-              apagarNota={this.props.apagarNota}
+                indice={index}
+                titulo={nota.titulo}
+                texto={nota.texto}
+                categoria={nota.categoria}
+                apagarNota={this.props.apagarNota}
               />
             </li>
           );

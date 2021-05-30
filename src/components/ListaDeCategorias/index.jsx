@@ -3,10 +3,9 @@ import React, { Component } from "react";
 import "./style.css";
 
 class ListaDeCategorias extends Component {
-
   constructor() {
     super();
-    this.state = {categorias: []};
+    this.state = { categorias: [] };
     this._novasCategorias = this._novasCategorias.bind(this);
   }
 
@@ -19,7 +18,7 @@ class ListaDeCategorias extends Component {
   }
 
   _novasCategorias(categorias) {
-    this.setState({...this.state,categorias})
+    this.setState({ ...this.state, categorias });
   }
 
   _handleEventoInput(e) {
